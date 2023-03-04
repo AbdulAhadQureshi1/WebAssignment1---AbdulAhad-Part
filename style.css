@@ -6,11 +6,19 @@
     text-decoration: none;
 }
 
+body {
+    background: #f5f5f5;
+}
+
+/* UTILLITY CLASSES */
+
 .flex {
     display: flex;
     justify-content: center;
     align-items: center;
 }
+
+/* NAVBAR STYLES */
 
 .navbar {
     justify-content: space-between;
@@ -19,6 +27,7 @@
     width: 100%;
     background: rgba(255, 255, 255, 0.359);
     backdrop-filter: blur(10px);
+    z-index: 9999;
 }
 .nav-logo {
     color: black;
@@ -48,9 +57,11 @@
     opacity: 0;
     flex-direction: column;
     transition: 200ms;
+    visibility: hidden;
 }
 .dropdown:hover > .dropdown-links {
     opacity: 1;
+    visibility: visible;
     transition: 200ms;
 }
 .dropdown-links > * {
@@ -69,6 +80,8 @@
 .hamburger {
     display: none;
 }
+
+/* HERO SECTION  */
 
 .hero-section {
     width: 100%;
@@ -105,18 +118,35 @@
 }
 
 
+/* DIVISIONS */
+.divisions {
+    position: absolute;
+    top: 80vh;
+    left: 15%;
+    width: 70%;
+    background-color: white;
+    margin: auto;
+    height: 350px;
+    transition: 300ms;
+    cursor: pointer;
+}
+.divisions > * {
+    width: 100%;
+    flex-direction: column;
+    gap: 30px;
+    height: 100%;
+}
+.divisions > * > img {
+    object-fit: contain;
+    height: 100px;  
+}
+.divisions > *:hover {
+    background-color: orange;
+    transition: 300ms;
+}
+
 @media (max-width: 1200px) {
 
-    .hero-section {
-        height: 100vh;
-        flex-direction: column-reverse;
-    }
-    .text-content > h1 {
-        text-align: center;
-    }
-    .text-content {
-        text-align: justify;
-    }
     .nav-links {
         display: none;
     }
@@ -138,9 +168,36 @@
         background-color: black;
         border-radius: 10px;
     }
+    .hero-section {
+        height: 100vh;
+        flex-direction: column-reverse;
+    }
+    .text-content > h1 {
+        text-align: center;
+    }
+    .text-content {
+        text-align: justify;
+    }
+
+    /* Division */
+    .divisions {
+        position: relative;
+        top: 0;
+        left: 0;
+        width: 100%;
+    }
 }
 @media (max-width: 600px) {
     .text-content > p {
         font-size: 14px;
+    }
+
+    .divisions {
+        flex-direction: column;
+        height: auto;
+        gap: 10vh;
+    }
+    .divisions > * {
+        padding: 5%;
     }
 }
