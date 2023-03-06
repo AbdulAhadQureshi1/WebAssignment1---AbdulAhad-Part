@@ -38,6 +38,7 @@ body > * {
     width: 100%;
     background: rgba(255, 255, 255, 0.359);
     backdrop-filter: blur(10px);
+    -webkit-backdrop-filter: blur(10px);
     z-index: 9999;
 }
 .nav-logo {
@@ -78,6 +79,7 @@ body > * {
 .dropdown-links > * {
     background: rgba(255, 255, 255, 0.367);
     backdrop-filter: blur(20px);
+    -webkit-backdrop-filter: blur(10px);
     padding: 10%;
     color: black;
     width: 200%;
