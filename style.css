@@ -11,6 +11,31 @@ body > * {
     padding: 0px 5% 0px 5%;
 }
 
+/* Selection Colors */
+::selection {
+    background-color: orange;
+    color: black;
+}
+::-moz-selection {
+    background-color: orange;
+    color: black;
+}
+
+/* Custom Scrollbar */
+::-webkit-scrollbar {
+    width: 10px;
+}
+::-webkit-scrollbar-track {
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb {
+    background: #01411C; 
+    border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+    background: #02632b; 
+}
+
 /* UTILLITY CLASSES */
 
 .flex {
